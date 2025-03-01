@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const mazeContainer = document.getElementById("maze");
     const startButton = document.getElementById("start");
     const timeDisplay = document.getElementById("time");
+    const btnUp = document.querySelector("#up");
+    const btnDW = document.querySelector("#down");
+    const btnLF = document.getElementById("left");
+    const btnRT = document.getElementById("right");
 
     let playerPosition;
     let wavePosition;
