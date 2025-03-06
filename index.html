@@ -1,12 +1,17 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidden Grove Mystery</title>
+    <title>Labyrinth of Time</title>
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="icon" href="data:,">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+    </style>
 </head>
 <body>
     <header class="game-title">
@@ -16,8 +21,8 @@
     <section class="menuInicial">
         <h2>Instructions</h2>
         <ul>
-            <li>Escape the maze before the rising water drowns you.</li>
-            <li>Use the keyboard arrows or buttons to move through the maze.</li>
+            <li>Escape the maze before the water reaches you.</li>
+            <li>Use the arrow keys or buttons to move.</li>
             <li>Reach the green exit to win the game.</li>
         </ul>
         <button id="start">Start Game</button>
@@ -36,10 +41,6 @@
                 <button id="right">→</button>
             </div>
         </div>
-
-        <div class="game-info">
-            <p>Time: <span id="time">0</span> seconds</p>
-        </div>
     </section>
 
     <section id="restart-container" style="display: none;">
@@ -47,6 +48,29 @@
         <button id="restart">Restart</button>
     </section>
 
+    <section id="game-over-container" style="display: none;">
+        <h2 id="game-over-message"></h2>
+        <button onclick="window.location.href='index.html'">Back to Main Menu</button>
+        <button id="restart-game">Restart Game</button>
+    </section>
+
     <script src="intropage.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const gameOverContainer = document.getElementById("game-over-container");
+            const gameOverMessage = document.getElementById("game-over-message");
+            const restartGameButton = document.getElementById("restart-game");
+            
+            if (localStorage.getItem("gameResult")) {
+                gameOverContainer.style.display = "block";
+                gameOverMessage.innerText = localStorage.getItem("gameResult");
+                localStorage.removeItem("gameResult");
+            }
+            
+            restartGameButton.addEventListener("click", () => {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
 </body>
 </html>

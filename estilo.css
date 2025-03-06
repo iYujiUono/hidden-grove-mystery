@@ -1,4 +1,4 @@
-/* Fundo do jogo */
+
 body {
     background: url('/assets/MazeWallpaper.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -7,42 +7,15 @@ body {
     text-align: center;
 }
 
-/* Estilização do título */
+
 .game-title h1 {
     font-size: 3rem;
-    color: #d4af37;
+    color: #4b8b3b; 
     text-shadow: 3px 3px 5px black;
     padding: 20px;
 }
 
-/* Estilização do menu inicial */
-.menuInicial {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: 20px;
-}
 
-.menuInicial h2 {
-    color: #d4af37;
-}
-
-button {
-    font-size: 20px;
-    padding: 10px 20px;
-    background: #d4af37;
-    color: black;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #c49c2f;
-}
-
-/* Labirinto */
 #maze-container {
     display: flex;
     justify-content: center;
@@ -59,36 +32,35 @@ td {
     text-align: center;
 }
 
-/* Elementos do jogo */
+
 .wall {
-    background-color: black;
+    background-color: #3e3306; 
 }
 
 .player {
-    background-color: red;
+    background-color: #ff4400; 
 }
 
 .exit {
-    background-color: green;
+    background-color: #05ff05; 
 }
 
 .water {
-    background-color: rgba(0, 0, 255, 0.5);
+    background-color: rgba(35, 35, 221, 0.402); 
 }
 
-/* Controles */
-.controls {
-    margin-top: 20px;
-}
-
-.controls button {
-    font-size: 24px;
-    padding: 10px;
-    margin: 5px;
-}
-
-/* Tela de reinício */
-#restart-container {
-    text-align: center;
+/* Game Over screen */
+#game-over-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
     margin-top: 50px;
+    color: #ff4500;
+}
+
+#game-over-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
 }
