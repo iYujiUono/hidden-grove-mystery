@@ -1,9 +1,8 @@
 
 body {
-    background: url('assets/MazeWallpaper.jpg') no-repeat center center fixed;
+    background: url('../hidden-grove-mystery/assets/MazeWallpaper.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Metamorphous', serif;
-    color: white;
     text-align: center;
     position: relative
 }
