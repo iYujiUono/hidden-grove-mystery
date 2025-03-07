@@ -5,6 +5,7 @@ body {
     font-family: 'Metamorphous', serif;
     color: white;
     text-align: center;
+    position: relative
 }
 
 
@@ -14,6 +15,7 @@ body {
     text-shadow: 3px 3px 5px black;
     padding: 20px;
 }
+
 
 
 #maze-container {
@@ -63,4 +65,19 @@ td {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 18px;
+}
+
+.controls button {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+.controls button#up {
+    margin-bottom: 5px;
+}
+.controls button:active{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
 }
