@@ -4,12 +4,13 @@ body {
     background-size: cover;
     font-family: 'Metamorphous', serif;
     text-align: center;
-    position: relative
+    position: relative;
 }
 .menuInicial {
     color: white;
     text-shadow: 1px 1px 1px black;
-    
+    border-color: black;
+    border: 50px;
 }
 
 .game-title h1 {
@@ -20,9 +21,23 @@ body {
 }
 
 .Instructions {
-    color: #4b8b3b;
-    text-shadow: 1px 1px 1px  black;
+    color: #a23331;
+    text-shadow: 2px 2px 2px  black;
+    font-size: 75px;
+    margin-top: 75px;
 
+}
+
+.textoD {
+    font-size: 35px;
+    text-shadow: 2px 2px 2px rgb(102, 97, 97);
+    margin-top: 30px
+}
+
+#start {
+width: 100px;
+height: 50px;
+margin : 50px;;
 }
 
 #maze-container {
@@ -33,29 +48,37 @@ body {
 
 table {
     border-collapse: collapse;
+    background-color: rgba(5, 43, 3, 0.58);
+    border: 2px solid black;
 }
 
 td {
     width: 30px;
     height: 30px;
     text-align: center;
+    
 }
 
 
 .wall {
-    background-color: #3e3306; 
+    background-color: #101d1d; 
+   
 }
 
 .player {
     background-color: #ff4400; 
+    border-color: black;
+    border: 2px solid black;
 }
 
 .exit {
     background-color: #05ff05; 
+    border: 2px solid black;
 }
 
 .water {
-    background-color: rgba(35, 35, 221, 0.402); 
+    background-color: #a6a86c8f; 
+    border-top: ;
 }
 
 /* Game Over screen */
@@ -74,8 +97,13 @@ td {
     font-size: 18px;
 }
  #restart-message{
-    color: white
+    color: white;
  }
+
+.controls{
+    margin-top: 20px;
+}
+
 
 .controls button {
     width: 30px;
